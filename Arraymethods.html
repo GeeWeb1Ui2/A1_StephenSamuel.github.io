@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Basic Array Methods Example</title>
+  </head>
+  <body>
+    <h1>Basic Array Methods Example</h1>
+    <p>Click the buttons below to perform array operations:</p>
+    <button onclick="addElement()">Add Element</button>
+    <button onclick="removeElement()">Remove Element</button>
+    <button onclick="sortArray()">Sort Array</button>
+    <button onclick="reverseArray()">Reverse Array</button>
+    <ul id="myList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+    <script>
+      // Get the list element
+      let list = document.getElementById("myList");
+
+      // Define an array to hold the list items
+      let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+
+      // Function to add a new item to the list
+      function addElement() {
+        // Get the next item index
+        let index = items.length + 1;
+        // Add the new item to the array
+        items.push("Item " + index);
+        // Add the new item to the list
+        let newItem = document.createElement("li");
+        newItem.appendChild(document.createTextNode("Item " + index));
+        list.appendChild(newItem);
+      }
+
+      // Function to remove the last item from the list
+      function removeElement() {
+        // Remove the last item from the array
+        items.pop();
+        // Remove the last item from the list
+        list.removeChild(list.lastChild);
+      }
+
+      // Function to sort the array and update the list
+      function sortArray() {
+        // Sort the array
+        items.sort();
+        // Update the list with the sorted items
+        for (let i = 0; i < items.length; i++) {
+          list.children[i].innerHTML = items[i];
+        }
+      }
+
+      // Function to reverse the array and update the list
+      function reverseArray() {
+        // Reverse the array
+        items.reverse();
+        // Update the list with the reversed items
+        for (let i = 0; i < items.length; i++) {
+          list.children[i].innerHTML = items[i];
+        }
+      }
+    </script>
+  </body>
+</html>

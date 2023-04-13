@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Hello World</h1>
+
+<div id="text1"></div>
+<button onclick="changeText()"> Change H2 text</button>
+
+<div id="box1">This box will change its style</div>
+<button onclick="changeBoxStyle()"> Change Box Style</button>
+
+<script>
+// Target certain elements and make it a variable
+
+let headingTwo= document.getElementById("text1");
+let box1=document.getElementById("box1");
+
+// default values of element........
+
+headingTwo.style.fontSize="30px";
+headingTwo.style.color="red";
+headingTwo.innerHTML="We will change this text";
+
+box1.style.width="400px";
+box1.style.height="400px";
+box1.style.backgroundColor="red";
+box1.style.color="white";
+
+//function to change style values of Targeted Elements
+function changeText(){
+    headingTwo.innerHTML="This is the new Text";
+    headingTwo.style.fontSize="60px";
+    headingTwo.style.color="blue";
+    headingTwo.style.padding="20px";
+    headingTwo.style.backgroundColor="grey";
+}
+function changeBoxStyle(){
+    box1.style.width="600px";
+    box1.style.height="600px";
+    box1.style.backgroundColor="greens";
+    box1.style.color="yellow";
+    }
+</script>
+</body>
+</html>

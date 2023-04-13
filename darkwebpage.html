@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Food Website</title>
+    <style>
+      /* Default styles for the page */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.5s ease-out, color 0.5s ease-out;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      li {
+        flex-basis: 33.33%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      /* Dark mode styles */
+      body.dark-mode {
+        background-color: #333;
+        color: #fff;
+      }
+      .dark-mode li {
+        background-color: #444;
+      }
+      .dark-mode h1 {
+        color: #fff;
+      }
+      .dark-mode p {
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Foodies</h1>
+      <p>Welcome to our food website! Browse our selection of delicious foods:</p>
+      <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+      <ul>
+        <li>
+            
+          <img src="https://via.placeholder.com/400x250/ff0000/ffffff?text=Pic+1" alt="Burgers">
+          <h2>Burgers</h2>
+          <p>Burgers are a delicious and satisfying food that combines savory beef, cheese, and vegetables on a fluffy bun. They're perfect for a quick lunch or a casual dinner with friends. </p>
+          <p>$154.99</p>
+        </li>
+        <li>
+          <img src="https://via.placeholder.com/400x250/00ff00/ffffff?text=Pic+2" alt="Donuts">
+          <h2>Donuts</h2>
+          <p>Donuts are a sweet treat that come in a variety of flavors and toppings, from classic glazed to fruity and decadent chocolate varieties. They're perfect for a mid-morning snack or a sweet dessert.</p>
+          <p>$9.99</p>
+        </li>
+        <li>
+          <img src="https://via.placeholder.com/400x250/0000ff/ffffff?text=Pic+3" alt="Ice Creams">
+          <h2>Ice Creams</h2>
+          <p>Ice creams are a cool and refreshing treat that come in a variety of flavors, from classic vanilla and chocolate to fruity and nutty varieties. They're perfect for a hot summer day or a sweet after-dinner treat.</p>
+          <p>$6.99</p>
+        </li>
+      </ul>
+    </div>
+    
+    <script>
+      function toggleDarkMode() {
+        var body = document.body;
+        body.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+</html>

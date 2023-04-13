@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Good Morning</h1>
+
+<div id="text1"></div>
+<button onclick="changeText()"> Click Me</button>
+
+<div id="box1">What day is it today?</div>
+<button onclick="changeBoxStyle()"> Click Me</button>
+
+<div id="text2">Do you remember?</div>
+<button onclick="changeText2()"> Click Me</button>
+
+<script>
+// Target certain elements and make it a variable
+
+let headingTwo= document.getElementById("text1");
+let box1=document.getElementById("box1");
+let headingThree=document.getElementById("text2");
+
+// default values of element........
+
+headingTwo.style.fontSize="30px";
+headingTwo.style.color="black";
+headingTwo.innerHTML="Time to wake up";
+
+box1.style.width="200px";
+box1.style.height="200px";
+box1.style.backgroundColor="red";
+box1.style.color="white";
+
+headingThree.style.fontSize="30px";
+headingThree.style.color="black";
+headingThree.innerHTML="Do you remember?";
+
+//function to change style values of Targeted Elements
+function changeText(){
+    headingTwo.innerHTML="Don't be late.";
+    headingTwo.style.fontSize="60px";
+    headingTwo.style.color="blue";
+    headingTwo.style.padding="20px";
+    headingTwo.style.backgroundColor="grey";
+}
+function changeBoxStyle(){
+    box1.style.width="300px";
+    box1.style.height="300px";
+    box1.style.backgroundColor="greens";
+    box1.style.color="yellow";
+    }
+
+    function changeText2(){
+    headingTwo.innerHTML="It's your Birthday.";
+    headingTwo.style.fontSize="60px";
+    headingTwo.style.color="blue";
+    headingTwo.style.padding="20px";
+    headingTwo.style.backgroundColor="grey";
+}
+</script>
+</body>
+</html>

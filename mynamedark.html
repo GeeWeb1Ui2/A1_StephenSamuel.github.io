@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="main-container"><h1></h1></div>
+    
+    <button onclick="darkMode()">Dark mode</button>
+
+    <script>
+        let mainContainer=document.getElementById("main-container");
+        mainContainer.innerHTML="Hi. My name is Stephen.";
+        
+        mainContainer.style.backgroundColor="white";
+        mainContainer.style.width="100%";
+        mainContainer.style.height="100%";
+        mainContainer.style.fontSize="40px";
+        mainContainer.style.fontFamily="Arial";
+        mainContainer.style.color="black";
+
+        function darkMode(){
+            mainContainer.style.backgroundColor="black";
+            mainContainer.style.color="white";
+        }
+
+    </script>
+   
+</body>
+</html>

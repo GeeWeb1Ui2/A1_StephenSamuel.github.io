@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+  </head>
+  <body>
+    <h1>Lions: The King of the Jungle??</h1>
+    <img src="https://imgs.search.brave.com/imGokzdU_SPs_WynbVLKEIh0-ByuIk1ZTVV_J3wxlwM/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDIwNDk3/MzYuanBn" alt="Lion" class="center" style="width:700px">
+    <p>The lion is a large cat native to Africa. It has a muscular, broad-chested body, short, rounded head and round ears. </p>
+    <button onclick="changeImage()">Change Image</button>
+    <button onclick="addImage()">Add Image</button>
+    <button onclick="addLink()">Add Link</button>
+    <button onclick="addLinkMiddle()">Add Link in Middle</button>
+    
+    <script>
+      var textIndex = 0;
+      var textValues = ["This is the first text.", "This is the second text.", "This is the third text."];
+      
+      function changeImage() {
+        document.getElementsByTagName("img")[0].src = "Lion3.jpg";
+      }
+       
+      function addImage() {
+        var newImg = document.createElement("img");
+        newImg.src = "Lioness.jpg";
+        newImg.alt = "Image 3";
+        document.body.appendChild(newImg);
+      }
+      
+      function addLink() {
+        var newLink = document.createElement("a");
+        var linkText = document.createTextNode("Click here for more information.");
+        newLink.appendChild(linkText);
+        newLink.href = "https://www.folly-farm.co.uk/zoo/meet-the-zoo-animals/african-lion/";
+        document.body.appendChild(newLink);
+      }
+      
+      function addLinkMiddle() {
+        var middlePara = document.getElementsByTagName("p")[0];
+        var newLink = document.createElement("a");
+        var linkText = document.createTextNode("Click here for more information.");
+        newLink.appendChild(linkText);
+        newLink.href = "https://www.folly-farm.co.uk/zoo/meet-the-zoo-animals/african-lion/";
+        middlePara.appendChild(newLink);
+      }
+    </script>
+    
+  </body>
+</html>

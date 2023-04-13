@@ -1,0 +1,29 @@
+*{
+    margin:20px;
+    padding:0;
+    font-family: sans-serif;
+    }
+    .content{
+    text-align: center;
+    color: #000000;
+    }
+    .content h1{
+    font-size: 70 px;
+    margin-top: 80 px;
+    }
+    .content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px
+    }
+    button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #000000;
+    }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mouse Methods and Event Listeners Example</title>
+  </head>
+  <body>
+    <h1 id="demo">Move your mouse over this text to see the events:</h1>
+    <script>
+      // Get the h1 element
+      let h1Element = document.getElementById("demo");
+
+      // Add an event listener for the mouseover event
+      h1Element.addEventListener("mouseover", function() {
+        h1Element.style.color = "red";
+        h1Element.style.backgroundColor = "yellow";
+        h1Element.innerHTML = "Mouse over detected!";
+      });
+
+      // Add an event listener for the mouseout event
+      h1Element.addEventListener("mouseout", function() {
+        h1Element.style.color = "black";
+        h1Element.style.backgroundColor = "white";
+        h1Element.innerHTML = "Move your mouse over this text to see the events:";
+      });
+
+      // Add an onclick event handler
+      h1Element.onclick = function() {
+        h1Element.innerHTML = "Clicked!";
+      };
+
+      // Add an onmousedown event handler
+      h1Element.onmousedown = function() {
+        h1Element.style.backgroundColor = "blue";
+      };
+
+      // Add an ondblclick event handler
+      h1Element.ondblclick = function() {
+        h1Element.innerHTML = "Double-clicked!";
+      };
+
+      // Add an onmousemove event handler
+      h1Element.onmousemove = function() {
+        h1Element.style.fontSize = "40px";
+      };
+
+      // Add an onmouseover event handler
+      h1Element.onmouseover = function() {
+        h1Element.style.fontWeight = "bold";
+      };
+    </script>
+  </body>
+</html>
